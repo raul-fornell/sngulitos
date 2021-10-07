@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&display=swap");
+
+:root {
+  --positive: #006aac;
+  --negative: #ffffff;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.font {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 40px;
+  height: 100%;
+}
+
+.ui {
+  width: 600px;
+  border: 2px solid var(--negative);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.bg {
+  background: var(--positive);
+  margin: 0;
+  padding: 0;
+}
+
+.avatar {
+  width: 300px;
+  height: 300px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  color: var(--negative);
+  text-align: center;
+}
+
+.button {
+  background: var(--negative);
+  padding: 20px 80px;
+  border-radius: 5px;
+  border: none;
+  color: var(--positive);
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: -7px;
+  cursor: pointer;
+  transition: top 0.1s, box-shadow 0.1s, background-color 0.3s;
+}
+
+.button:hover:not(.clicked) {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.button.outlined {
+  background-color: transparent;
+  border: 2px solid var(--negative);
+  color: var(--negative);
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.button.clicked {
+  box-shadow: 0 0px 0 rgba(0, 0, 0, 0.3);
+  top: 0px;
+  transition: top 0s, box-shadow 0s;
+}
+
+.button.outlined:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button.mini {
+  padding: 30px 20px 0 20px;
+  font-size: 80px;
+  line-height: 0;
+}
+
+.scale-up {
+  transform: scale(4);
+  display: block;
+}
+
+.tabs {
+  list-style: none;
+  margin: 0 -20px 0 -20px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: var(--negative);
+  column-gap: 10px;
+  border-bottom: 2px solid var(--negative);
+  align-items: flex-end;
+  height: 70px;
+}
+
+.tab {
+  border-top: 2px solid var(--negative);
+  border-left: 2px solid var(--negative);
+  border-right: 2px solid var(--negative);
+  border-radius: 10px 10px 0 0;
+  padding: 7px 20px;
+  cursor: pointer;
+  transition: padding-bottom 0.3s cubic-bezier(0.32, 1.16, 0.78, 1.3),
+    background-color 0.3s;
+  user-select: none;
+}
+
+.tab.selected {
+  background-color: var(--negative);
+  color: var(--positive);
+  padding-bottom: 13px;
+}
+
+.tab:hover:not(.selected) {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.canvas-wrapper {
+  margin: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--negative);
+  border-radius: 10px;
+}
+
+.avatar {
+  width: 300px;
+  height: 300px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.loading-text {
+  width: 100%;
+  margin-top: -20px;
+}
+
+.watcher {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  height: auto;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 0 0 3px rgba(0, 0, 0.5);
+  border-radius: 20px;
+  color: yellow;
+  font-family: monospace;
+  font-size: 18px;
+}
